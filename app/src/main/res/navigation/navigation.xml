@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/navigation"
+            app:startDestination="@id/praAssesment">
+
+    <fragment android:id="@+id/praAssesment" android:name="org.d3if0048.pra_assesment.PraAssesment"
+              android:label="fragment_pra_assesment" tools:layout="@layout/fragment_pra_assesment">
+        <action android:id="@+id/action_praAssesment_to_persegiPanjang" app:destination="@id/persegiPanjang"/>
+        <action android:id="@+id/action_praAssesment_to_segitigaSikuSiku" app:destination="@id/segitigaSikuSiku"/>
+    </fragment>
+    <fragment android:id="@+id/persegiPanjang" android:name="org.d3if0048.pra_assesment.PersegiPanjang"
+              android:label="fragment_persegi_panjang2" tools:layout="@layout/fragment_persegi_panjang2">
+        <action android:id="@+id/action_persegiPanjang_to_praAssesment" app:destination="@id/praAssesment"/>
+    </fragment>
+    <fragment android:id="@+id/segitigaSikuSiku" android:name="org.d3if0048.pra_assesment.SegitigaSikuSiku"
+              android:label="fragment_segitiga_siku_siku" tools:layout="@layout/fragment_segitiga_siku_siku">
+        <action android:id="@+id/action_segitigaSikuSiku_to_praAssesment" app:destination="@id/praAssesment"/>
+    </fragment>
+    <fragment android:id="@+id/about2" android:name="org.d3if0048.pra_assesment.About" android:label="fragment_about"
+              tools:layout="@layout/fragment_about"/>
+</navigation>
